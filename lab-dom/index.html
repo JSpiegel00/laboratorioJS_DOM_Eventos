@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción a Cursos - FISC UTP</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <main class="wrap">
+    <header class="top">
+      <div class="eyebrow">Universidad Tecnológica de Panamá · FISC</div>
+      <h1>Formulario de Inscripción a Curso</h1>
+      <p class="lead">Completa tus datos para realizar la inscripción oficial al curso deseado.</p>
+    </header>
+
+    <form id="inscripcion" novalidate class="f-grid">
+      
+      <div class="campo full">
+        <label for="nombre">Nombre completo</label>
+        <input class="i" id="nombre" name="nombre" type="text" autocomplete="name" aria-describedby="nombre-error">
+        <p id="nombre-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="cedula">Cédula</label>
+        <p class="hint">Formato panameño: 8-123-4567 o PE-12-345</p>
+        <input class="i" id="cedula" name="cedula" type="text" placeholder="8-123-4567" aria-describedby="cedula-error">
+        <p id="cedula-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input class="i" id="correo" name="correo" type="email" autocomplete="email" aria-describedby="correo-error">
+        <p id="correo-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="celular">Celular</label>
+        <p class="hint">8 dígitos empezando con 6 (ej. 6123-4567 o 61234567)</p>
+        <input class="i" id="celular" name="celular" type="tel" placeholder="6123-4567" aria-describedby="celular-error">
+        <p id="celular-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="fechaNacimiento">Fecha de nacimiento</label>
+        <input class="i" id="fechaNacimiento" name="fechaNacimiento" type="date" aria-describedby="fechaNacimiento-error">
+        <p id="fechaNacimiento-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo full">
+        <label for="curso">Curso</label>
+        <select class="i" id="curso" name="curso" aria-describedby="curso-error">
+          <option value="">Selecciona un curso</option>
+          <option value="Ingeniería Web">Ingeniería Web</option>
+          <option value="Desarrollo de Software">Desarrollo de Software</option>
+          <option value="Bases de Datos Avanzadas">Bases de Datos Avanzadas</option>
+          <option value="Redes de Computadoras">Redes de Computadoras</option>
+        </select>
+        <p id="curso-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <fieldset class="campo full fieldset-custom">
+        <legend>Modalidad</legend>
+        <div class="radio-group">
+          <label><input type="radio" name="modalidad" value="presencial"> Presencial</label>
+          <label><input type="radio" name="modalidad" value="virtual"> Virtual</label>
+        </div>
+        <p id="modalidad-error" class="error" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="campo full" id="campo-sede" hidden>
+        <label for="sede">Sede</label>
+        <select class="i" id="sede" name="sede" aria-describedby="sede-error">
+          <option value="">Selecciona una sede</option>
+          <option value="Bocas del Toro (Centro Regional de Bocas del Toro)">Bocas del Toro</option>
+          <option value="Penonomé (Centro Regional de Coclé)">Penonomé</option>
+          <option value="Colón (Centro Regional de Colón)">Colón</option>
+          <option value="Ciudad de Panamá (Campus Víctor Levi Sasso)">Ciudad de Panamá</option>
+          <option value="La Chorrera (Centro Regional de Chiriquí)">David</option>
+          <option value="David (Centro Regional de Panamá Oeste)">La Chorrera</option>
+          <option value="Santiago (Centro Regional de Veraguas)">Santiago</option>
+        </select>
+        <p id="sede-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="clave">Contraseña</label>
+        <input class="i" id="clave" name="clave" type="password" aria-describedby="clave-error clave-meter-lbl">
+        <div class="meter" aria-hidden="true"><i id="clave-meter"></i></div>
+        <span class="meter-lbl" id="clave-meter-lbl">Fuerza: —</span>
+        <p id="clave-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo">
+        <label for="clave2">Confirmar contraseña</label>
+        <input class="i" id="clave2" name="clave2" type="password" aria-describedby="clave2-error">
+        <p id="clave2-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo full">
+        <div class="label-with-counter">
+          <label for="comentarios">Comentarios (Opcional)</label>
+          <span id="comentarios-contador" class="contador">0/200</span>
+        </div>
+        <textarea class="i" id="comentarios" name="comentarios" rows="3" maxlength="200" aria-describedby="comentarios-error comentarios-contador"></textarea>
+        <p id="comentarios-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo full campo-checkbox">
+        <label class="checkbox-label">
+          <input type="checkbox" id="terminos" name="terminos" aria-describedby="terminos-error">
+          Acepto los términos y condiciones de inscripción
+        </label>
+        <p id="terminos-error" class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="campo full">
+        <button type="submit" class="b primary">Inscribirme</button>
+      </div>
+
+    </form>
+
+    <section id="confirmacion" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
