@@ -7,3 +7,5 @@ CAPTURAS:
 <img width="910" height="432" alt="WhatsApp Image 2026-09-29 at 11 32 21 PM" src="https://github.com/user-attachments/assets/57b55260-4809-4c99-8ade-0863089e63b2" />
 
 LINK A GITHUB PAGES
+
+https://jspiegel00.github.io/laboratorioJS_DOM_Eventos/lab-dom/?nombre=&cedula=aaa&correo=&celular=&fechaNacimiento=&curso=&sede=&clave=&clave2=&comentarios=
